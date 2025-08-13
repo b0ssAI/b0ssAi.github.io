@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal Data Explorer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nebula-bg.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="nebula-bg">
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    
+    <header class="cosmic-header">
+        <h1>UNIVERSAL DATA EXPLORER</h1>
+        <div class="terminal-line">Система инициализирована | Статус: <span class="status-active">АКТИВЕН</span></div>
+    </header>
+
+    <nav class="cosmic-nav">
+        <button class="nav-btn pulsate" data-tab="search">Поиск</button>
+        <button class="nav-btn pulsate" data-tab="fuckyou">F.A.Q.</button>
+        <button class="nav-btn pulsate" data-tab="rules">Правила</button>
+        <button class="nav-btn pulsate" data-tab="ai">A.I.</button>
+        <button class="nav-btn pulsate" data-tab="support">Поддержка</button>
+        <button class="nav-btn pulsate" data-tab="developer">Разработчик</button>
+    </nav>
+
+    <main class="cosmic-main">
+        <!-- Поиск -->
+        <div id="search" class="tab-content active">
+            <div class="search-container">
+                <div class="holographic-display">
+                    <input type="text" id="universalSearch" class="cosmic-input" placeholder="ВВЕДИТЕ ЗАПРОС...">
+                    <button id="searchBtn" class="cosmic-btn">ЗАПУСТИТЬ СКАНИРОВАНИЕ</button>
+                </div>
+                <div id="searchResults" class="results-grid"></div>
+            </div>
+        </div>
+
+        <!-- Остальные вкладки -->
+        <div id="fuckyou" class="tab-content">
+            <!-- Контент F.A.Q. -->
+        </div>
+        
+        <div id="rules" class="tab-content">
+            <!-- Контент правил -->
+        </div>
+
+        <div id="ai" class="tab-content">
+            <div class="ai-terminal">
+                <div class="terminal-header">GEMINI 2.5 PRO INTERFACE</div>
+                <div class="terminal-body" id="aiChat"></div>
+                <input type="text" class="terminal-input" placeholder="Введите запрос для ИИ...">
+            </div>
+        </div>
+
+        <div id="support" class="tab-content">
+            <div class="support-form">
+                <textarea class="cosmic-textarea" placeholder="Опишите вашу проблему..."></textarea>
+                <button class="cosmic-btn">ОТПРАВИТЬ</button>
+            </div>
+        </div>
+
+        <div id="developer" class="tab-content">
+            <div class="admin-panel">
+                <!-- Админ-панель -->
+            </div>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+    <script src="js/search.js"></script>
+</body>
+      </html>
