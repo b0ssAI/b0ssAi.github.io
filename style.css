@@ -1,0 +1,80 @@
+:root {
+    --cosmic-purple: #6a00ff;
+    --neon-blue: #00f0ff;
+    --dark-space: #0a0a20;
+    --star-yellow: #ffee00;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.cosmic-header {
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+    z-index: 10;
+}
+
+.cosmic-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(10, 10, 32, 0.7);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-btn {
+    background: linear-gradient(135deg, var(--cosmic-purple), var(--neon-blue));
+    border: none;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    font-family: 'Orbitron', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-btn::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to bottom right,
+        transparent, transparent, transparent,
+        rgba(255,255,255,0.1), transparent
+    );
+    transform: rotate(30deg);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% { transform: rotate(30deg) translate(-30%, -30%); }
+    100% { transform: rotate(30deg) translate(30%, 30%); }
+}
+
+/* Анимации и дополнительные стили */
+.pulsate {
+    animation: pulsate 2s infinite;
+}
+
+@keyframes pulsate {
+    0% { box-shadow: 0 0 5px var(--neon-blue); }
+    50% { box-shadow: 0 0 20px var(--neon-blue); }
+    100% { box-shadow: 0 0 5px var(--neon-blue); }
+}
+
+/* Другие элементы... */
